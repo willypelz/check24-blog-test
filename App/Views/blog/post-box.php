@@ -32,10 +32,9 @@
     </div>
 
     <div class="post-box-footer">
-        <a href="#" class="user">
-            By:
-        </a>
 
     </div>
 </div>
+<br>
+<br>
 <!--/ Post Box -->

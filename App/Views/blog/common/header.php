@@ -26,18 +26,25 @@
   </head>
   <body>
     <!-- Header -->
+
     <header>
+
         <nav class="navbar">
           <div class="container-fluid">
+
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+            <div class="">
+                        <img src="<?php echo assets('blog/images/check24.png'); ?>" width="100" height="70" alt="Logo" />
+<br>
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="<?php echo url('/'); ?>">Check24</a>
+              <a class="navbar-brand" href="<?php echo url('/'); ?>">Home</a>
+              <a class="navbar-brand" href="<?php echo url('/'); ?>">Post</a>
+              <a class="navbar-brand" href="<?php echo url('/'); ?>">Impressum</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -61,4 +68,5 @@
     </header>
     <!--/ Header -->
     <!-- Content -->
+    <br>
     <div id="content">

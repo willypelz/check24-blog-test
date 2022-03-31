@@ -169,6 +169,7 @@ header .user-image {
 
 /* Content */
 #content {
+    margin-top: 60px !important;
     padding: 55px 0 40px;
     overflow: hidden;
 }
