@@ -62,7 +62,13 @@
         <!--/ Comments -->
         <!-- Comment Form -->
         <form action="<?php echo url('/post/' . seo($post->title) . '/' . $post->id . '/add-comment'); ?>" method="post" id="comment-form" class="box">
-            <h3 class="heading">Post Comment</h3>
+            <h5 class="heading">Title</h5>
+            <input name="title" class="input" placeholder="Enter post title"/>
+            <h5 class="heading">Mail</h5>
+            <input name="mail" class="input" placeholder="Enter mail"/>
+            <h5 class="heading">Url</h5>
+            <input name="url" class="input" placeholder="Enter URL"/>
+            <h5 class="heading">Comment</h5>
             <textarea name="comment" id="editor" class="input" placeholder="Post Your Comment" cols="30" rows="10" required="required"></textarea>
             <button class="comment-button">Submit</button>
         </form>
