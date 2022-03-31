@@ -52,4 +52,30 @@ class LoginController extends Controller
             return $this->json($json);
         }
     }
+
+    /**
+    * Validate Login Form
+    *
+    * @return bool
+    */
+    private function isValid()
+    {
+        $email = $this->request->post('email');
+        $password = $this->request->post('password');
+        if (! $email) {
+            $this->errors[] = 'Email cannot be empty';
+        } elseif (! filter_var($email , FILTER_VALIDATE_EMAIL)) {
+            $this->errors[] = 'Email is not valid';
+        }
+        if (! $password) {
+            $this->errors[] = 'Password field cannot be empty';
+        }
+        if (! $this->errors) {
+            $loginModel = $this->load->model('Login');
+            if (! $loginModel->isValidLogin($email, $password)) {
+                $this->errors[] = 'Invalid Login Credentials';
+            }
+        }
+        return empty($this->errors);
+    }
 }
