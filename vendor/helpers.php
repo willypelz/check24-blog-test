@@ -117,6 +117,24 @@ if (! function_exists('read_more')) {
     }
 }
 
+if (! function_exists('read_more_by_char')) {
+    /**
+    * Cut the given string and get the given number of words from it
+    *
+    * @param string $string
+    * @param int $number_of_words
+    * @return string
+    */
+    function read_more_by_char($string, $number_of_words)
+    {
+        if (strlen($string) <= $number_of_words) {
+            return $string;
+        }
+
+        $stringCut = substr($string, 0, $number_of_words) . '...';
+        return $stringCut;
+    }
+}
 if (! function_exists('seo')) {
      /**
      * Remove any unwanted characters from the given string
