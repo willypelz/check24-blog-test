@@ -25,5 +25,31 @@ class LoginController extends Controller
         return $this->blogLayout->render($view);
     }
 
+    /**
+    * Submit Login form
+    *
+    * @return mixed
+    */
+    public function submit()
+    {
+        if ($this->isValid()) {
+            $loginModel = $this->load->model('Login');
 
+            $loggedInUser = $loginModel->user();
+            if ($this->request->post('remember')) {
+                $this->cookie->set('login', $loggedInUser->code);
+            } else {
+                $this->session->set('login', $loggedInUser->code);
+            }
+
+            $json = [];
+            $json['success']  = 'Welcome ' . $loggedInUser->first_name;
+            $json['redirectTo'] = $this->url->link('/');
+            return $this->json($json);
+        } else {
+            $json = [];
+            $json['errors'] = implode('<br>', $this->errors);
+            return $this->json($json);
+        }
+    }
 }
