@@ -6,29 +6,6 @@
         <div class="copyrights">
             &copy;2022 Check24 All Rights Reserved
         </div>
-        <div class="social">
-            <a href="#" class="facebook">
-                <span class="fa fa-facebook"></span>
-            </a>
-            <a href="#" class="google">
-                <span class="fa fa-google-plus"></span>
-            </a>
-            <a href="#" class="twitter">
-                <span class="fa fa-twitter"></span>
-            </a>
-            <a href="#" class="youtube">
-                <span class="fa fa-youtube"></span>
-            </a>
-            <a href="#" class="instagram">
-                <span class="fa fa-instagram"></span>
-            </a>
-            <a href="#" class="pinterest">
-                <span class="fa fa-pinterest"></span>
-            </a>
-            <a href="#" class="rss">
-                <span class="fa fa-rss"></span>
-            </a>
-        </div>
     </footer>
     <!--/ Footer -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -16,6 +16,8 @@ use System\Application;
 
 // Blog Routes
 $app->route->add('/', 'Blog/Home');
+$app->route->add('/post/:text/:id', 'Blog/Post');
+$app->route->add('/post/:text/:id/add-comment', 'Blog/Post@addComment', 'POST');
 $app->route->add('/register', 'Blog/Register');
 $app->route->add('/register/submit', 'Blog/Register@submit', 'POST');
 $app->route->add('/login', 'Blog/Login');
