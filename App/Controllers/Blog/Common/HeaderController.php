@@ -14,7 +14,6 @@ class HeaderController extends Controller
 
         $data['user'] = $loginModel->isLogged() ? $loginModel->user() : null;
 
-        $data['categories'] = $this->load->model('Categories')->getEnabledCategoriesWithNumberOfTotalPosts();
 
         return $this->view->render('blog/common/header', $data)->getOutput();
     }
