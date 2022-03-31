@@ -347,7 +347,6 @@ header .user-image {
 
 /** Social Media Widget */
 
-/* Categories widget */
 #widget #categories-widget .content a {
     display: block;
     color: #063773;
@@ -364,7 +363,6 @@ header .user-image {
     font-weight: bold;
     padding: 2px 5px;
 }
-/** Categories Widget */
 
 /* Popular Posts Widget */
 #widget #popular-posts-widget .content a {
