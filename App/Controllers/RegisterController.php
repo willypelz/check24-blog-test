@@ -38,4 +38,22 @@ class RegisterController extends Controller
 
         return $this->json($json);
     }
+
+     /**
+     * Validate the form
+     *
+     * @param int $id
+     * @return bool
+     */
+    private function isValid()
+    {
+        $this->validator->required('first_name', 'First Name is Required');
+        $this->validator->required('last_name', 'Last Name is Required');
+        $this->validator->required('password')->minLen('password', 8)->match('password', 'confirm_password', 'Confirm Password Should Match Password');
+        $this->validator->required('email')->email('email');
+        $this->validator->unique('email', ['users', 'email']);
+        $this->validator->requiredFile('image')->image('image');
+
+        return $this->validator->passes();
+    }
 }
