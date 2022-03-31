@@ -1,6 +1,6 @@
 <?php
 
-date_default_timezone_set('Africa/Cairo');
+date_default_timezone_set('Africa/Lagos');
 require __DIR__ . '/vendor/System/Application.php';
 require __DIR__ . '/vendor/System/File.php';
 
