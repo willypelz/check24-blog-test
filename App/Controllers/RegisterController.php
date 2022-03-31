@@ -19,4 +19,23 @@ class RegisterController extends Controller
 
         return $this->blogLayout->render($view);
     }
+
+   /**
+    * Submit Data for creating new user
+    *
+    * @return string | json
+    */
+    public function submit()
+    {
+        $json = [];
+        if ($this->isValid()) {
+            $this->load->model('Users')->create();
+            $json['success'] = 'User Has Been Created Successfully';
+            $json['redirectTo'] = $this->url->link('/');
+        } else {
+            $json['errors'] = $this->validator->flattenMessages();
+        }
+
+        return $this->json($json);
+    }
 }
