@@ -63,7 +63,7 @@
         <!-- Comment Form -->
         <form action="<?php echo url('/post/' . seo($post->title) . '/' . $post->id . '/add-comment'); ?>" method="post" id="comment-form" class="box">
             <h3 class="heading">Post Comment</h3>
-            <textarea name="comment" id="comment" class="input" placeholder="Post Your Comment" cols="30" rows="10" required="required"></textarea>
+            <textarea name="comment" id="editor" class="input" placeholder="Post Your Comment" cols="30" rows="10" required="required"></textarea>
             <button class="comment-button">Submit</button>
         </form>
         <!--/ Comment Form -->

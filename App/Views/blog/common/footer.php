@@ -17,4 +17,10 @@
     <!-- Custom JS -->
     <script src="<?php echo assets('blog/js/custom.js'); ?>"></script>
   </body>
+  <script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .then( editor => {  } )
+        .catch( error => { } );
+</script>
 </html>
